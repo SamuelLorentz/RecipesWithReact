@@ -9,7 +9,9 @@ const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState([]);
 
-  useEffect(async () => {}, []);
+  useEffect(async () => {
+    getRecipes();
+  }, []);
 
   const getRecipes = async () => {
     const response = await fetch(
